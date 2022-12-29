@@ -34,7 +34,7 @@ public class Main {
         Thread.sleep(5000);
         System.out.println("First case was successfully\n");
 
-        System.out.println("Start second case");
+        System.out.println("Start second");
 
 
 
