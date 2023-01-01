@@ -11,10 +11,10 @@ public class Main {
         System.out.println("Start autotests!\n");
 
 //        For home PC
-//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Home\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Home\\chromedriver_win32\\chromedriver.exe");
 
 //        For laptop
-        System.setProperty("webdriver.chrome.driver", "C:\\webdrivers\\chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "C:\\webdrivers\\chromedriver.exe");
 
 //        For work PC
 //        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe");
@@ -49,12 +49,21 @@ public class Main {
         driver.findElement(By.xpath("/html/body/div/div/div[2]/div/div[2]/div/div/form/button")).click();
         driver.switchTo().alert().accept();
         driver.findElement(By.xpath("/html/body/div/div/div[1]/button[1]")).click();
-        System.out.println("Second case was successfully");
+        System.out.println("Second case was successfully\n");
 
 
+        System.out.println("Start third case");
+        driver.findElement(By.xpath("/html/body/div/div/div[2]/div/div[1]/div[2]/button")).click();
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("/html/body/div/div/div[2]/div/div[1]/button[3]")).click();
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("/html/body/div/div/div[2]/div/div[2]/div/form/div/div/input")).sendKeys("Harry");
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("/html/body/div/div/div[2]/div/div[2]/div/div/table/tbody/tr/td[5]/button")).click();
+        driver.findElement(By.xpath("/html/body/div/div/div[1]/button[1]")).click();
+        System.out.println("Finish third case");
 
-
-//        driver.close();
+        driver.close();
 
 
 
